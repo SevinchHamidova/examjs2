@@ -1,0 +1,93 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Books</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body >
+    <header>
+    <div class="container">
+      <div class="head-top">
+        <a class="logo" href="#"><img src="./icons/book-icon.svg" width="50" height="30" alt="site logo">Online<span>Book</span>
+        </a>
+        <span class="save-book" >My save book</span>
+      </div>
+    </div>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <form class="js-search-book" method="GET" action="#"
+          autocomplete="off">
+          <div class="form-in">
+            <input class="search-inp  js-search-book-title " type="search" name="book_title" aria-label="Search your farovite book" placeholder="Search your farovite book">
+            <button class="btn-search" type="submit">Search</button>
+          </div>
+          <div class="form-in" >
+            <select  class="js-book-sort">
+              <option class="one" value="Sort" selected disabled>Sort</option>
+              <option  value="a-z">A to Z</option>
+              <option value="z-a">Z to A</option>
+
+              <option value="low-high">Low Pages to High Pages</option>
+              <option value="high-low">High Pages to Low Pages</option>
+          </select>
+          <select  class="js-year-sort">
+            <option class="one" value="Sort" selected disabled>Sort year</option>
+            <option value="oldest-latest">Old to New</option>
+            <option value="latest-oldest">New to Old</option>
+          </select>
+          
+        
+          
+            <select id="language-option" class="js-book-language ">
+              <option value="Language">Lenguage</option>
+            </select>
+            <!-- <input class="form-control js-min-year" type="number"   aria-label="enter your book year" placeholder="Year"> -->
+            <input class="form-control search-aut" type="search" name="book_author" aria-label="enter your book author" placeholder="Enter your book author">
+          </div>
+        </form>
+        </div>
+      </section>
+      <main>
+
+        <section class="hero">
+      
+          <div class="container">
+            <p class="alert alert-danger d-none js-not-found-movie" id="alert" role="alert"></p>
+            <ul class="js-book-list "></ul>
+          </div>
+      
+        </section>
+      
+      </main>
+      <template class="js-book-item-template">
+        <li class="book-list-item ">
+      
+          <img class="book-list-poster" src=" " alt="  ">
+    
+          <h4 class="book-list-heading"></h4>
+          <p class="book-list-author"></p>
+          <div class="book-list-publish">
+            <time class="book-list-year  year-icon" datetime="2024-03-12"></time>
+            <span class="book-list-page  page-icon" ></span>
+            <span class="book-list-language   language-icon">
+            </span>
+          </div>
+          <div class="list-end">
+            <a class="Vikipedia" href=" ">Vikipedia</a>
+            <button class="book-list-more-btn" type="button">BookMark</button>
+          </div>
+      </li> 
+      </template>
+    </main>
+    <!-- scripts -->
+    <script src="./js/books.js"></script>
+    <!-- <script src="./js/renderbooks.js"></script> -->
+    <script src="./js/filter.js"></script>
+
+  </body>
+  </html>
